@@ -14,7 +14,7 @@ class Game {
     if (this.isClassicGameType) {
       return [rock, paper, scissors];
     } else {
-      return [rock, paper, scissors, lizzard, spock];
+      return [rock, paper, scissors, lizard, spock];
     }
   }
   handlePlayerMove(playerSelection) {
@@ -51,12 +51,12 @@ class Game {
   checkIfPlayerWinsDifficult(playerSelection, computerSelection) {
     var playerWins = false
     if (playerSelection === rock) {
-      playerWins = computerSelection === scissors || computerSelection === lizzard;
+      playerWins = computerSelection === scissors || computerSelection === lizard;
     } else if (playerSelection === paper) {
       playerWins = computerSelection === rock || computerSelection === spock;
     } else if (playerSelection === scissors) {
-      playerWins = computerSelection === paper || computerSelection === lizzard;
-    } else if (playerSelection === lizzard) {
+      playerWins = computerSelection === paper || computerSelection === lizard;
+    } else if (playerSelection === lizard) {
       playerWins = computerSelection === paper || computerSelection === spock;
     } else if (playerSelection === spock) {
       playerWins = computerSelection === scissors || computerSelection === rock;
@@ -66,7 +66,7 @@ class Game {
 }
 
 // global constants
-// array data type or object
+// array or object
 
 const rock = {
   image: "assets/happy-rocks.svg";
@@ -78,8 +78,8 @@ const scissors = {
   image: "assets/happy-scissors.svg";
 }
 
-const lizzard = {
-  image: "assets/happy-lizzard.svg";
+const lizard = {
+  image: "assets/happy-lizard.svg";
 }
 
 const spock = {
