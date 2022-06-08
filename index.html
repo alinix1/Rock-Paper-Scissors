@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap" rel="stylesheet" type="text/css">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+<header class="header">
+  <h1>Rock Paper Scissors</h1>
+</header>
+  <sidebar class="left-sidebar">
+    <section class="left-sidebar-label">
+      <h2>Wins</h2>
+    </section>
+  </sidebar>
+<section class="main">
+  <h2 id="mainText">Rock, Paper, Scissors</h2>
+  <h2 id="subText">Choose Your Game!</h2>
+  <button class="select-game-option button" id="classicGameButton">
+    <h3> CLASSIC </h3>
+    <p>
+      rock > scissors<br>
+      paper > rock<br>
+      scissors > paper
+    </p>
+  </button><br>
+  <button class="select-game-option button" id="difficultGameButton"
+    <h3> DIFFICULT </h3>
+    <p>
+      rock > scissors & lizard<br>
+      paper > rock & spock<br>
+      scissors > paper & lizard<br>
+      lizard > scissors & rock
+    </p>
+  </button>
+  <section id="chooseFighter" class="hidden">
+    <article value="Rock"><img src="./assets/happy-rocks.svg" alt="happy, smiling cartoon rocks" id="rockImage" class="hidden"></article>
+    <article value="Paper"><img src="./assets/happy-paper.svg" alt="happy, smiling cartoon paper" id="paperImage" class="hidden"></article>
+    <article value="Scissors"><img src="./assets/happy-scissors.svg" alt="happy, smiling cartoon scissors" id="scissorsImage" class="hidden"></article>
+    <br id="difficultDivideLine" class="hidden">
+    <article value="Lizard"><img src="./assets/happy-lizard.svg" alt="happy, smiling cartoon lizard" id="lizardImage" class="hidden"></article>
+    <article value="Spock"><img src="./assets/spock.svg" alt="image of Spock" id="spockImage" class="hidden"></article>
+    <img src="./assets/happy-rocks.svg" alt="happy rocks image" id="rockImageTie" class="hidden">
+    <img src="./assets/happy-paper.svg" alt="happy paper image" id="paperImageTie" class="hidden">
+    <img src="./assets/happy-scissors.svg" alt="happy scissors image" id="scissorImageTie" class="hidden">
+    <img src="./assets/happy-lizard.svg" alt="happy lizard image" id="lizardImageTie" class="hidden">
+    <img src="./assets/spock.svg" alt="spock image" id="spockImageTie" class="hidden">
+  </section>
+</section>
+  <sidebar class="left-sidebar">
+    <section class="right-sidebar-label">
+      <h2>Wins</h2>
+    </section>
+  </sidebar>
+  <script src="game.js"></script>
+  <script src="player.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
