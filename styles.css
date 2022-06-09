@@ -1,5 +1,5 @@
 /* alphabetical within the rule - properties */
-/* avoid using pixels  */
+
 /* * {
   border: 1px solid red;
 } */
@@ -29,30 +29,23 @@ html {
 }
 
 img {
-  width: 30vw;
+  width: 20vw;
 }
 
-/* h1 {
-  font-family: "SourceCodePro";
-  color: black;
-  font-size: 30px;
-  font-weight: bold;
-} */
-
 h1 {
-  font-family: "SourceCodePro";
-  color: #FFFFFF;
   background: linear-gradient(to right, white, midnightblue 50%, royalblue 50%);
   background-clip: text;
+  background-position: 100%;
+  background-size: 200% 100%;
+  color: #FFFFFF;
+  font: bold;
+  font-family: "SourceCodePro";
+  font-size: 50px;
+  font-weight: 800;
+  transition: background-position 275ms ease;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-size: 200% 100%;
-  background-position: 100%;
-  transition: background-position 275ms ease;
   word-spacing: -20px;
-  font-weight: 800;
-  font-size: 50px;
-  font: bold;
 }
 
 h1:hover {
@@ -60,8 +53,8 @@ h1:hover {
 }
 
 h2 {
-  font-family: "SourceCodePro";
   color: #FFFFFF;
+  font-family: "SourceCodePro";
   font-size: 30px;
 }
 
@@ -70,9 +63,18 @@ h2:hover {
 }
 
 h3 {
-  font-family: "SourceCodePro";
   color: #FFFFFF;
+  font-family: "SourceCodePro";
   font-size: 25px;
+  font-weight: bold;
+}
+
+h4 {
+  color: #FFFFFF;
+  font-family: "SourceCodePro";
+  font-size: 20px;
+  font-weight: 200;
+  padding: 20px;
 }
 
 p {
@@ -87,28 +89,27 @@ p {
   background-color: #C36FEC;
   background-position: center;
   background-size: cover;
-  width: 25%;
-  float: left;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  float: left;
+  justify-content: center;
+  width: 25%;
 }
 
 .change-game {
   color: #FFFFFF;
   font-size: 1vw;
-  padding: 1vw;
   margin-top: 100px;
+  padding: 1vw;
   text-transform: uppercase;
 }
 
 .main {
-  font-family: "SourceCodePro";
+  align-items: center;
   background-color: #BB56ED;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   padding: 5vw;
   width: 85%;
 }
@@ -117,10 +118,10 @@ p {
   background-color: #C36FEC;
   background-position: center;
   background-size: cover;
-  width: 25%;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+  width: 25%;
 }
 
 .select-game-option {
@@ -138,32 +139,38 @@ p {
 
 .button:hover {
   background-color: #FFFFFF;
-  color: #9D35D2;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  color: #9D35D2;
 }
 
-.hidden {
-  display: none;
+p:hover {
+  color: #9D35D2;
 }
+
+h3:hover {
+  color: #9D35D2;
+}
+
+/* .hidden {
+  display: none;
+} */
 
 .human-emoji {
   font-size: 30px;
-  vertical-align: middle;
   line-height: 2;
+  vertical-align: middle;
 }
 
 .human-title {
   font-family: "SourceCodePro";
-
 }
 
 .computer-emoji {
   font-size: 30px;
-  vertical-align: middle;
   line-height: 2;
+  vertical-align: middle;
 }
 
 .computer-title {
   font-family: "SourceCodePro";
-
 }
