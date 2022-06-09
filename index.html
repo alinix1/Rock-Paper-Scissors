@@ -2,36 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap" rel="stylesheet" type="text/css">
+    <link href="styles.css" rel="stylesheet" type="text/css">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-<header class="header">
+<!-- <header class="header">
   <h1>Rock Paper Scissors</h1>
-</header>
+</header> -->
+<div class="main-container">
   <sidebar class="left-sidebar">
     <section class="left-sidebar-label">
-      <h2>Wins</h2>
+      <figure class="human-emoji"> 🧑 </figure>
+      <section class="human-title"> Human </section>
+      <h3>Wins:0</h3>
+      <button class="change-game button hidden" id="changeGameButton">Change Game?</button>
     </section>
   </sidebar>
 <section class="main">
-  <h2 id="mainText">Rock, Paper, Scissors</h2>
+  <h1 id="mainText">Rock, Paper, Scissors</h1>
   <h2 id="subText">Choose Your Game!</h2>
   <button class="select-game-option button" id="classicGameButton">
-    <h3> CLASSIC </h3>
+    <h3>🪨 CLASSIC ✂️</h3>
     <p>
       rock > scissors<br>
       paper > rock<br>
       scissors > paper
     </p>
   </button><br>
-  <button class="select-game-option button" id="difficultGameButton"
-    <h3> DIFFICULT </h3>
+  <button class="select-game-option button" id="difficultGameButton">
+    <h3> 🦎 DIFFICULT 🖖 </h3>
     <p>
       rock > scissors & lizard<br>
       paper > rock & spock<br>
       scissors > paper & lizard<br>
-      lizard > scissors & rock
+      lizard > paper & spock<br>
+      spock > scissors & rock
     </p>
   </button>
   <section id="chooseFighter" class="hidden">
@@ -48,11 +53,14 @@
     <img src="./assets/spock.svg" alt="spock image" id="spockImageTie" class="hidden">
   </section>
 </section>
-  <sidebar class="left-sidebar">
+  <sidebar class="right-sidebar">
     <section class="right-sidebar-label">
-      <h2>Wins</h2>
+      <figure class="computer-emoji"> 💻 </figure>
+      <section class="computer-title"> Computer </section>
+      <h3>Wins:0</h3>
     </section>
   </sidebar>
+</div>
   <script src="game.js"></script>
   <script src="player.js"></script>
   <script src="main.js"></script>

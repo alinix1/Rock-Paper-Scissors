@@ -69,22 +69,19 @@ class Game {
 // array or object
 
 const rock = {
-  image: "assets/happy-rocks.svg";
+  image: "assets/happy-rocks.svg"
 }
 const paper = {
-  image: "assets/happy-paper.svg";
+  image: "assets/happy-paper.svg"
 }
 const scissors = {
-  image: "assets/happy-scissors.svg";
+  image: "assets/happy-scissors.svg"
 }
 
 const lizard = {
-  image: "assets/happy-lizard.svg";
+  image: "assets/happy-lizard.svg"
 }
 
 const spock = {
-  image: "assets/spock.svg";
+  image: "assets/spock.svg"
 }
-
-
-module.exports = Game;
