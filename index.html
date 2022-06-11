@@ -11,7 +11,7 @@
     <section class="left-sidebar-label">
       <figure class="human-emoji"> 🧑 </figure>
       <section class="human-title"> Human </section>
-      <h4>Wins:0</h4>
+      <h4 class="human-win" id="humanWin">Wins: 0</h4>
       <button class="change-game button hidden" id="changeGameButton">Change Game?</button>
     </section>
   </sidebar>
@@ -36,25 +36,28 @@
       spock > scissors & rock
     </p>
   </button>
-  <section id="chooseFighter" class="hidden">
-    <figure value="Rock"><img src="./assets/happy-rocks.svg" alt="happy, smiling cartoon rocks" id="rockImage" class="hidden"></figure>
-    <figure value="Paper"><img src="./assets/happy-paper.svg" alt="happy, smiling cartoon paper" id="paperImage" class="hidden"></figure>
-    <figure value="Scissors"><img src="./assets/happy-scissors.svg" alt="happy, smiling cartoon scissors" id="scissorsImage" class="hidden"></figure>
-    <br id="difficultDivideLine" class="hidden">
-    <figure value="Lizard"><img src="./assets/happy-lizard.svg" alt="happy, smiling cartoon lizard" id="lizardImage" class="hidden"></figure>
-    <figure value="Spock"><img src="./assets/spock.svg" alt="image of Spock" id="spockImage" class="hidden"></figure>
-    <img src="./assets/happy-rocks.svg" alt="happy rocks image" id="rockImageTie" class="hidden">
-    <img src="./assets/happy-paper.svg" alt="happy paper image" id="paperImageTie" class="hidden">
-    <img src="./assets/happy-scissors.svg" alt="happy scissors image" id="scissorImageTie" class="hidden">
-    <img src="./assets/happy-lizard.svg" alt="happy lizard image" id="lizardImageTie" class="hidden">
-    <img src="./assets/spock.svg" alt="spock image" id="spockImageTie" class="hidden">
+  <section id="classicFightersOption" class="hidden">
+    <figure value="Rock"><img src="./assets/happy-rocks.svg" alt="smiling cartoon rocks" id="classicRockImage" class="hidden" data-choice="rock"></figure>
+    <figure value="Paper"><img src="./assets/happy-paper.svg" alt="smiling cartoon paper" id="classicPaperImage" class="hidden" data-choice="paper"></figure>
+    <figure value="Scissors"><img src="./assets/happy-scissors.svg" alt="smiling cartoon scissors" id="classicScissorsImage" class="hidden" data-choice="scissors"></figure>
   </section>
+  <section id="difficultFightersOption" class="hidden">
+    <figure value="Rock"><img src="./assets/happy-rocks.svg" alt="smiling cartoon rocks" id="difficultRockImage" class="hidden"></figure>
+    <figure value="Paper"><img src="./assets/happy-paper.svg" alt="smiling cartoon paper" id="difficultPaperImage" class="hidden"></figure>
+    <figure value="Scissors"><img src="./assets/happy-scissors.svg" alt="smiling cartoon scissors" id="difficultScissorsImage" class="hidden"></figure>
+    <figure value="Lizard"><img src="./assets/happy-lizard.svg" alt="image of lizard" id="difficultLizardImage" class="hidden"></figure>
+    <figure value="Spock"><img src="./assets/spock.svg" alt="image of spock" id="difficultSpockImage" class="hidden"></figure>
+  </section>
+</section>
+<section class="hidden" id="chosenPlayers">
+  <img class="human-player image" id="humanPlayerImg">
+  <img class="computer-player image" id="computerPlayerImg">
 </section>
   <sidebar class="right-sidebar">
     <section class="right-sidebar-label">
       <figure class="computer-emoji"> 💻 </figure>
       <section class="computer-title"> Computer </section>
-      <h4>Wins:0</h4>
+      <h4 class="computer-win" id="computerWin">Wins: 0</h4>
     </section>
   </sidebar>
 </div>

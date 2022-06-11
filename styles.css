@@ -1,4 +1,5 @@
 /* alphabetical within the rule - properties */
+/* need a way to prevent scroll on page */
 
 /* * {
   border: 1px solid red;
@@ -151,9 +152,9 @@ h3:hover {
   color: #9D35D2;
 }
 
-/* .hidden {
+.hidden {
   display: none;
-} */
+}
 
 .human-emoji {
   font-size: 30px;
