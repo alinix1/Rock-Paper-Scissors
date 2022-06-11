@@ -3,6 +3,7 @@ class Game {
     this.human = human;
     this.computer = computer;
     this.isClassicGameType = true;
+    
   }
   setClassicGameType() {
     this.isClassicGameType = true;
@@ -12,76 +13,47 @@ class Game {
   }
   getPossibleMoves() {
     if (this.isClassicGameType) {
-      return [rock, paper, scissors];
+      return ['rock', 'paper', 'scissors'];
     } else {
-      return [rock, paper, scissors, lizard, spock];
+      return ['rock', 'paper', 'scissors', 'lizard', 'spock'];
     }
   }
-  handlePlayerMove(playerSelection) {
-    // function in main.js
-    var computerSelection = this.computer.takeTurn(this.getPossibleMoves())
-    if (playerSelection === computerSelection) {
-      return 'TIE';
-    }
-    var playerWins = false
-    if (this.isClassicGameType) {
-      playerWins = checkIfPlayerWinsClassic(playerSelection, computerSelection);
-    } else {
-      playerWins = checkIfPlayerWinsDifficult(playerSelection, computerSelection)
-    }
-    if (playerWins) {
-        // increment human.wins
-        // return 'HUMAN'
-    } else {
-        // increment computer.wins
-        // return 'COMPUTER'
+  // handlePlayerMove(playerSelection) {
+  //   var computerSelection = this.computer.takeTurn(this.getPossibleMoves())
+  //   if (playerSelection === computerSelection) {
+  //     return 'TIE';
+  //   }
+  //   var playerWins = false
+  //   if (this.isClassicGameType) {
+  //     playerWins = checkIfPlayerWinsClassic(playerSelection, computerSelection);
+  //   } else {
+  //     playerWins = checkIfPlayerWinsDifficult(playerSelection, computerSelection)
+  //   }
+  //   if (playerWins) {
+  //       // increment human.wins
+  //       // return 'HUMAN'
+  //   } else {
+  //       // increment computer.wins
+  //       // return 'COMPUTER'
+  //   }
+  checkIfPlayerWinsClassic() {
+    if (this.human.token === 'rock' && this.computer.token === 'scissors' || this.human.token === 'paper' && this.computer.token === 'rock' || this.human.token === 'scissors' && this.computer.token === 'paper') {
+      this.human.increaseWins();
+      return subHeaderText.innerText = "Human won this round!";
+    } else if (this.human.token === 'rock' && this.computer.token === 'paper' || this.human.token === 'paper' && this.computer.token === 'scissors' || this.human.token === 'scissors' && this.computer.token === 'rock') {
+      this.computer.increaseWins();
+      return subHeaderText.innerText = "Computer won this round!";
+    } else if (this.human.token === this.computer.token) {
+      return subHeaderText.innerText = "It's a draw!";
     }
   }
-  checkIfPlayerWinsClassic(playerSelection, computerSelection) {
-    var playerWins = false
-    if (playerSelection === rock) {
-      playerWins = computerSelection === scissors;
-    } else if (playerSelection === paper) {
-      playerWins = computerSelection === rock;
-    } else if (playerSelection === scissors) {
-      playerWins = computerSelection === paper;
+  checkIfPlayerWinsDifficult() {
+    if (this.human.token === 'rock' && this.computer.token === 'scissors' || this.human.token === 'paper' && this.computer.token === 'rock' || this.human.token === 'scissors' && this.computer.token === 'paper' || this.human.token === 'rock' && this.computer.token === 'lizard' || this.human.token === 'paper' && this.computer.token === 'spock' || this.human.token === 'scissors' && this.computer.token === 'lizard' || this.human.token === 'lizard' && this.computer.token === 'paper' || this.human.token === 'lizard' && this.computer.token === 'spock' || this.human.token === 'spock' && this.computer.token === 'scissors' || this.human.token === 'spock' && this.computer.token === 'rock') {
+      this.human.increaseWins();
+      return subHeaderText.innerText = 'Human won this round!';
+    } else if (this.human.token === 'rock' && this.computer.token === 'paper' || this.human.token === 'paper' && this.computer.token === 'scissors' || this.human.token === 'scissors' && this.computer.token === 'rock' || this.human.token === 'rock' && this.computer.token === 'spock' || this.human.token === 'paper' && this.computer.token === 'lizard' || this.human.token === 'scissors' && this.computer.token === 'spock' || this.human.token === 'lizard' && this.computer.token === 'rock' || this.human.token === 'lizard' && this.computer.token === 'scissors' || this.human.token === 'spock' && this.computer.token === 'paper' || this.human.token === 'spock' && this.computer.token === 'lizard') {
+      this.computer.increaseWins();
+      return subHeaderText.innerText = 'Computer won this round!';
     }
-    return playerWins;
   }
-  checkIfPlayerWinsDifficult(playerSelection, computerSelection) {
-    var playerWins = false
-    if (playerSelection === rock) {
-      playerWins = computerSelection === scissors || computerSelection === lizard;
-    } else if (playerSelection === paper) {
-      playerWins = computerSelection === rock || computerSelection === spock;
-    } else if (playerSelection === scissors) {
-      playerWins = computerSelection === paper || computerSelection === lizard;
-    } else if (playerSelection === lizard) {
-      playerWins = computerSelection === paper || computerSelection === spock;
-    } else if (playerSelection === spock) {
-      playerWins = computerSelection === scissors || computerSelection === rock;
-    }
-    return playerWins;
-  }
-}
-
-// global constants
-// array or object
-
-const rock = {
-  image: "assets/happy-rocks.svg"
-}
-const paper = {
-  image: "assets/happy-paper.svg"
-}
-const scissors = {
-  image: "assets/happy-scissors.svg"
-}
-
-const lizard = {
-  image: "assets/happy-lizard.svg"
-}
-
-const spock = {
-  image: "assets/spock.svg"
-}
+};
