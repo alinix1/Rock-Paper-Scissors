@@ -1,4 +1,3 @@
-// alphabetical order query selectors//
 
 // QUERY SELECTORS
 
@@ -15,8 +14,8 @@ var difficultPaperImage = document.getElementById('difficultPaperImage');
 var difficultScissorsImage = document.getElementById('difficultScissorsImage');
 var difficultLizardImage = document.getElementById('difficultLizardImage');
 var difficultSpockImage = document.getElementById('difficultSpockImage');
-var humanWin = document.getElementById('humanWin');
-var computerWin = document.getElementById('computerWin');
+var humanWin = document.getElementById('winCountHuman');
+var computerWin = document.getElementById('winCountComputer');
 var mainHeaderText = document.getElementById('mainText');
 var subHeaderText = document.getElementById('subText');
 
@@ -32,10 +31,30 @@ var fighterOptions = [classicRockImage, classicPaperImage, classicScissorsImage,
 classicGameButton.addEventListener('click', switchToClassicView);
 difficultGameButton.addEventListener('click', switchToDifficultView);
 changeGameButton.addEventListener('click', changeGameOption);
-classicRockImage.addEventListener('click', function() {
+classicRockImage.addEventListener('click', () => {
   startClassicGame('rock');
 });
-// rockImage.addEventListener('click', )
+classicPaperImage.addEventListener('click', () => {
+  startClassicGame('paper');
+});
+classicScissorsImage.addEventListener('click', () => {
+  startClassicGame('scissors');
+});
+difficultRockImage.addEventListener('click', () => {
+  startDifficultGame('rock');
+});
+difficultPaperImage.addEventListener('click', () => {
+  startDifficultGame('paper');
+});
+difficultScissorsImage.addEventListener('click', () => {
+  startDifficultGame('scissors');
+});
+difficultLizardImage.addEventListener('click', () => {
+  startDifficultGame('lizard');
+});
+difficultSpockImage.addEventListener('click', () => {
+  startDifficultGame('spock');
+});
 
 // fighterOption.addEventListener('click', );
 // mainHeaderText.addEventListener('click', );
@@ -70,10 +89,10 @@ function showChosenFighters() {
   var humanPlayer = game.human.token;
   var computerPlayer = game.computer.token;
   for (var i = 0; i < fighterOptions.length; i++) {
-    if (humanPlayer === fighterOptions[i].dataset.choice) {
+    if (humanPlayer === fighterOptions[i].dataset.icon) {
       humanPlayerImg.src = `${fighterOptions[i].src}`
     }
-    if (computerPlayer === fighterOptions[i].dataset.choice) {
+    if (computerPlayer === fighterOptions[i].dataset.icon) {
       computerPlayerImg.src = `${fighterOptions[i].src}`
     }
   }
@@ -118,6 +137,10 @@ function randomDifficultChoice() {
   return difficultChoices[randomDifficult];
 };
 
+function updateWins(whoWonElement, whoWonPlayer) {
+  whoWonElement.innerText = whoWonPlayer.wins;
+};
+
 function startClassicGame(choice) {
   game.computer.token = randomClassicChoice();
   if (event.target.id === 'classicRockImage') {
@@ -129,8 +152,57 @@ function startClassicGame(choice) {
   }
   hideGameOptions();
   showChosenFighters();
+  var didHumanWinClassic = game.checkIfPlayerWinsClassic();
+  switch(didHumanWinClassic) {
+    case true:
+      updateWins(humanWin, human);
+      subHeaderText.innerText = "Human won this round!";
+    break;
+    case false:
+      updateWins(computerWin, computer);
+      subHeaderText.innerText = "Computer won this round!";
+    break;
+    default:
+      subHeaderText.innerText = "It's a draw!";
+  }
+  setTimeout(() => {
+    game.resetGame()
+  }, 1000);
   game.setClassicGameType();
-  displayWins();
+};
+
+function startDifficultGame(choice) {
+  game.computer.token = randomDifficultChoice();
+  if (event.target.id === 'difficultRockImage') {
+    game.human.token = 'rock';
+  } else if (event.target.id === 'difficultPaperImage') {
+    game.human.token = 'paper';
+  } else if (event.target.id === 'difficultScissorsImage') {
+    game.human.token = 'scissors';
+  } else if (event.target.id === 'difficultLizardImage') {
+    game.human.token = 'lizard';
+  } else if (event.target.id === 'difficultSpockImage') {
+    game.human.token = 'spock';
+  }
+  hideGameOptions();
+  showChosenFighters();
+  var didHumanWinDifficult = game.checkIfPlayerWinsDifficult();
+  switch(didHumanWinDifficult) {
+    case true:
+      updateWins(humanWin, human);
+      subHeaderText.innerText = "Human won this round!";
+    break;
+    case false:
+      updateWins(computerWin, computer);
+      subHeaderText.innerText = "Computer won this round!";
+    break;
+    default:
+      subHeaderText.innerText = "It's a draw!";
+  }
+  setTimeout(() => {
+    game.resetGame()
+  }, 1000);
+  game.setDifficultGameType();
 };
 
 function changeGameOption() {
@@ -138,10 +210,5 @@ function changeGameOption() {
   toggleViews(classicGameButton);
   hideGameOptions();
   toggleViews(changeGameButton);
-  subHeaderText.innerText = 'Choose your game!';
-};
-
-function displayWins() {
-  humanWin.innerText = `Wins: ${human.wins}`
-  computerWin.innerText = `Wins: ${computer.wins}`
+  subHeaderText.innerText = 'Choose Your Game!';
 };

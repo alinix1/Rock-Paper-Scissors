@@ -156,13 +156,17 @@ h3:hover {
   display: none;
 }
 
+.classicFighters, .difficultFighters {
+  cursor: pointer;
+}
+
 .human-emoji {
   font-size: 30px;
   line-height: 2;
   vertical-align: middle;
 }
 
-.human-title {
+.human-title, .computer-title {
   font-family: "SourceCodePro";
 }
 
@@ -172,6 +176,6 @@ h3:hover {
   vertical-align: middle;
 }
 
-.computer-title {
+/* .computer-title {
   font-family: "SourceCodePro";
-}
+} */
