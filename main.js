@@ -1,4 +1,3 @@
-
 // QUERY SELECTORS
 
 var classicGameButton = document.getElementById('classicGameButton');
@@ -26,7 +25,7 @@ var human = new Player('human');
 var computer = new Player('computer');
 var fighterClassicOptions = [classicRockImage, classicPaperImage, classicScissorsImage];
 var fighterDifficultOptions = [difficultRockImage, difficultPaperImage, difficultScissorsImage, difficultLizardImage, difficultSpockImage];
-var fighterOptions = [classicRockImage, classicPaperImage, classicScissorsImage, difficultRockImage, difficultPaperImage, difficultScissorsImage, difficultLizardImage, difficultSpockImage ];
+var fighterOptions = [classicRockImage, classicPaperImage, classicScissorsImage, difficultRockImage, difficultPaperImage, difficultScissorsImage, difficultLizardImage, difficultSpockImage];
 
 // EVENT LISTENERS
 
@@ -152,17 +151,17 @@ function startClassicGame(choice) {
   hideGameOptions();
   showChosenFighters();
   var didHumanWinClassic = game.checkIfPlayerWinsClassic();
-  switch(didHumanWinClassic) {
+  switch (didHumanWinClassic) {
     case true:
       updateWins(humanWin, human);
-      subHeaderText.innerText = "Human won this round!";
-    break;
+      subHeaderText.innerText = 'Human won this round!';
+      break;
     case false:
       updateWins(computerWin, computer);
-      subHeaderText.innerText = "Computer won this round!";
-    break;
+      subHeaderText.innerText = 'Computer won this round!';
+      break;
     default:
-      subHeaderText.innerText = "It's a draw!";
+      subHeaderText.innerText = 'It\'s a draw!';
   }
   setTimeout(() => {
     game.resetGame()
@@ -186,17 +185,17 @@ function startDifficultGame(choice) {
   hideGameOptions();
   showChosenFighters();
   var didHumanWinDifficult = game.checkIfPlayerWinsDifficult();
-  switch(didHumanWinDifficult) {
+  switch (didHumanWinDifficult) {
     case true:
       updateWins(humanWin, human);
-      subHeaderText.innerText = "Human won this round!";
-    break;
+      subHeaderText.innerText = 'Human won this round!';
+      break;
     case false:
       updateWins(computerWin, computer);
-      subHeaderText.innerText = "Computer won this round!";
-    break;
+      subHeaderText.innerText = 'Computer won this round!';
+      break;
     default:
-      subHeaderText.innerText = "It's a draw!";
+      subHeaderText.innerText = 'It\'s a draw!';
   }
   setTimeout(() => {
     game.resetGame()
