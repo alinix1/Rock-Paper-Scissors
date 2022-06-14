@@ -24,7 +24,9 @@ var subHeaderText = document.getElementById('subText');
 var game;
 var human = new Player('human');
 var computer = new Player('computer');
-var fighterOptions = [classicRockImage, classicPaperImage, classicScissorsImage, difficultRockImage, difficultPaperImage, difficultScissorsImage, difficultLizardImage, difficultSpockImage];
+var fighterClassicOptions = [classicRockImage, classicPaperImage, classicScissorsImage];
+var fighterDifficultOptions = [difficultRockImage, difficultPaperImage, difficultScissorsImage, difficultLizardImage, difficultSpockImage];
+var fighterOptions = [classicRockImage, classicPaperImage, classicScissorsImage, difficultRockImage, difficultPaperImage, difficultScissorsImage, difficultLizardImage, difficultSpockImage ];
 
 // EVENT LISTENERS
 
@@ -55,9 +57,6 @@ difficultLizardImage.addEventListener('click', () => {
 difficultSpockImage.addEventListener('click', () => {
   startDifficultGame('spock');
 });
-
-// fighterOption.addEventListener('click', );
-// mainHeaderText.addEventListener('click', );
 
 // FUNCTIONS AND EVENT HANDLERS
 
@@ -100,13 +99,13 @@ function showChosenFighters() {
 };
 
 function showDifficultOptions() {
-  for (const element of fighterOptions) {
+  for (const element of fighterDifficultOptions) {
     element.classList.remove('hidden');
   }
 };
 
 function showClassicOptions() {
-  for (const element of fighterOptions) {
+  for (const element of fighterClassicOptions) {
     element.classList.remove('hidden');
   }
 };
@@ -167,7 +166,7 @@ function startClassicGame(choice) {
   }
   setTimeout(() => {
     game.resetGame()
-  }, 1000);
+  }, 1200);
   game.setClassicGameType();
 };
 
@@ -201,13 +200,13 @@ function startDifficultGame(choice) {
   }
   setTimeout(() => {
     game.resetGame()
-  }, 1000);
+  }, 1200);
   game.setDifficultGameType();
 };
 
 function changeGameOption() {
-  toggleViews(difficultGameButton);
-  toggleViews(classicGameButton);
+  classicGameButton.classList.remove('hidden');
+  difficultGameButton.classList.remove('hidden');
   hideGameOptions();
   toggleViews(changeGameButton);
   subHeaderText.innerText = 'Choose Your Game!';
