@@ -29,6 +29,7 @@ var fighterOptions = [classicRockImage, classicPaperImage, classicScissorsImage,
 
 // EVENT LISTENERS
 
+
 classicGameButton.addEventListener('click', switchToClassicView);
 difficultGameButton.addEventListener('click', switchToDifficultView);
 changeGameButton.addEventListener('click', changeGameOption);
