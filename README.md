@@ -36,7 +36,7 @@ Built by [Ali Nix](https://github.com/alinix1), a Front End Engineering student 
 * https://www.linkedin.com/in/ali-nix-38b9b9126/
 
 ## Reflection
-In the beginning I made an outline for the data model that helped guide me in building the Player class and the Game class.  I struggled with the CSS the most on this project.  I most likely will not add additional features/functionality.  If I do decide to add a feature I would like to add sound to the game.  
+In the beginning I made an outline or architecture for the data model (classes) that helped guide me in building the Player class and the Game class.  I struggled with the CSS the most on this project.  I most likely will not add additional features/functionality.  If I do decide to add a feature I would like to add a reset button. 
 
 ## Online Resources
 * MDN docs and Stack Overflow
