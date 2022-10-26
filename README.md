@@ -14,12 +14,6 @@ Rock, Paper, Scissors is a web application that allows users to play the game of
 - When a user wants to play a different game, a change game button will appear on the upper left side of the page
 - the user will then return to the main page and can play again
 
-<img width="1432" alt="Screen Shot 2022-06-14 at 12 37 10 PM" src="https://user-images.githubusercontent.com/28677929/173670917-0dee4397-bfe7-426f-942b-7febab97645e.png">
-
-<img width="1436" alt="Screen Shot 2022-06-14 at 12 37 32 PM" src="https://user-images.githubusercontent.com/28677929/173671453-09638037-dce9-48bb-b43b-59e7a065b1b6.png">
-
-<img width="1439" alt="Screen Shot 2022-06-14 at 12 37 48 PM" src="https://user-images.githubusercontent.com/28677929/173671520-4efbfb71-7302-4b06-8699-ed1fec7ffcc4.png">
-
 https://user-images.githubusercontent.com/28677929/173676884-d0a54729-848a-4c07-9ba0-c9265ff05921.mov
 
 https://user-images.githubusercontent.com/28677929/173677161-54df13b6-9e24-437a-a4ee-e062b3bc1501.mov
@@ -27,9 +21,9 @@ https://user-images.githubusercontent.com/28677929/173677161-54df13b6-9e24-437a-
 ## Technologies Used
 <p align="left">
 <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" title="JavaScript" alt="JavaScript" width="100" height="30">
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" title="HTML" alt="HTML" width="100" height="30">
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" title="CSS" alt="CSS" width="100" height="30">
 </p>
-* HTML
-* CSS
 
 ## Contributors
 Built by [Ali Nix](https://github.com/alinix1), a Front End Engineering student in Mod 1 at the [Turing School of Software and Design](https://turing.edu/)
