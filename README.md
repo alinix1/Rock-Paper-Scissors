@@ -25,7 +25,7 @@ https://user-images.githubusercontent.com/28677929/173676884-d0a54729-848a-4c07-
 https://user-images.githubusercontent.com/28677929/173677161-54df13b6-9e24-437a-a4ee-e062b3bc1501.mov
 
 ## Technologies Used
-* JavaScript
+* https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E
 * HTML
 * CSS
 
