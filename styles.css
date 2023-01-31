@@ -31,11 +31,11 @@ body, html {
 
 img {
   display: inline;
-  width: 20vw;
+  width: 15vw;
 }
 
 h1 {
-  background: linear-gradient(to right, white, midnightblue 50%, royalblue 50%);
+  background: linear-gradient(to right, white, midnightblue 50%, #41E0E0 50%);
   background-clip: text;
   background-position: 100%;
   background-size: 200% 100%;
@@ -89,7 +89,7 @@ p {
 }
 
 .left-sidebar {
-  background-color: #C36FEC;
+  background-color: #340C49;
   background-position: center;
   background-size: cover;
   display: flex;
@@ -109,7 +109,7 @@ p {
 
 .main {
   align-items: center;
-  background-color: #BB56ED;
+  background-color: #681094;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -118,7 +118,7 @@ p {
 }
 
 .right-sidebar {
-  background-color: #C36FEC;
+  background-color: #340C49;
   background-position: center;
   background-size: cover;
   display: flex;
@@ -185,7 +185,7 @@ h3:hover {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 200px;
-  position: absolute;
+  position: relative;
 }
 
 .computer-title,
