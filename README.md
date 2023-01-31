@@ -1,6 +1,6 @@
 ## ROCK, PAPER, SCISSORS
 
-## [Deploy Link](https://alinix1.github.io/Rock-Paper-Scissors/)
+## [Deploy Link](https://rock-paper-scissors-sigma-eight.vercel.app/)
 
 ## Project Overview
 Rock, Paper, Scissors is a web application that allows users to play the game of Rock, Paper, Scissors virtually against a computer.  The classic game has the following rules:  **rock** crushes **scissors** >> **scissors** cuts **paper** >> **paper** covers **rock**. The difficult option includes **lizard** and **spock** for additional challenges and strategies.  
