@@ -1,68 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link href="styles.css" rel="stylesheet" type="text/css">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
     <title>Rock Paper Scissors</title>
-</head>
-<body>
-<div class="main-container">
-  <sidebar class="left-sidebar">
-    <section class="left-sidebar-label">
-      <span class="human-emoji" id="humanEmoji"> 💀 </span>
-      <section class="human-title"> Human </section>
-      <h4 class="human-win">Wins: <span id="winCountHuman">0</span></h4>
-      <button class="change-button hidden" id="changeGameButton">Change Game?</button>
-    </section>
-  </sidebar>
-<section class="main">
-  <h1 id="mainText">Rock, Paper, Scissors</h1>
-  <h2 id="subText">Choose Your Game!</h2>
-  <button class="select-game-option button" id="classicGameButton">
-    <h3>🪨 CLASSIC ✂️</h3>
-    <p>
-      rock > scissors<br>
-      paper > rock<br>
-      scissors > paper
-    </p>
-  </button><br>
-  <button class="select-game-option button" id="difficultGameButton">
-    <h3> 🦎 DIFFICULT 🖖 </h3>
-    <p>
-      rock > scissors & lizard<br>
-      paper > rock & spock<br>
-      scissors > paper & lizard<br>
-      lizard > paper & spock<br>
-      spock > scissors & rock
-    </p>
-  </button>
-  <section id="classicFightersOption" class=" classicFighters hidden">
-    <img src="./assets/happy-rocks.png" alt="smiling cartoon rocks" id="classicRockImage" class="hidden" data-icon="rock">
-    <img src="./assets/happy-paper.png" alt="smiling cartoon paper" id="classicPaperImage" class="hidden" data-icon="paper">
-    <img src="./assets/happy-scissors.png" alt="smiling cartoon scissors" id="classicScissorsImage" class="hidden" data-icon="scissors">
-  </section>
-  <section id="difficultFightersOption" class="difficultFighters hidden">
-    <img src="./assets/happy-rocks.png" alt="smiling cartoon rocks" id="difficultRockImage" class="hidden" data-icon="rock">
-    <img src="./assets/happy-paper.png" alt="smiling cartoon paper" id="difficultPaperImage" class="hidden" data-icon="paper">
-    <img src="./assets/happy-scissors.png" alt="smiling cartoon scissors" id="difficultScissorsImage" class="hidden" data-icon="scissors">
-    <img src="./assets/flat-lizard.png" alt="image of lizard" id="difficultLizardImage" class="hidden" data-icon="lizard">
-    <img src="./assets/spock.png" alt="image of spock" id="difficultSpockImage" class="hidden" data-icon="spock">
-  </section>
-  <section class="hidden" id="chosenPlayers">
-    <img class="human-player image" id="humanPlayerImg">
-    <img class="computer-player image" id="computerPlayerImg">
-  </section>
-</section>
-  <sidebar class="right-sidebar">
-    <section class="right-sidebar-label">
-      <span class="computer-emoji"> 💻 </span>
-      <section class="computer-title"> Computer </section>
-      <h4 class="computer-win">Wins: <span id="winCountComputer">0</span></h4>
-    </section>
-  </sidebar>
-</div>
-  <script src="game.js"></script>
-  <script src="player.js"></script>
-  <script src="main.js"></script>
-</body>
+  </head>
+  <body>
+    <div class="main-container">
+      <sidebar class="left-sidebar">
+        <section class="left-sidebar-label">
+          <span class="human-emoji" id="humanEmoji"> 💀 </span>
+          <section class="human-title">Human</section>
+          <h4 class="human-win">Wins: <span id="winCountHuman">0</span></h4>
+          <button class="change-button hidden" id="changeGameButton">
+            Change Game?
+          </button>
+        </section>
+      </sidebar>
+      <section class="main">
+        <h1 id="mainText">Rock, Paper, Scissors</h1>
+        <h2 id="subText">Choose Your Game!</h2>
+        <button class="select-game-option button" id="classicGameButton">
+          <h3>🪨 CLASSIC ✂️</h3>
+          <p>
+            rock > scissors<br />
+            paper > rock<br />
+            scissors > paper
+          </p></button
+        ><br />
+        <button class="select-game-option button" id="difficultGameButton">
+          <h3>🦎 DIFFICULT 🖖</h3>
+          <p>
+            rock > scissors & lizard<br />
+            paper > rock & spock<br />
+            scissors > paper & lizard<br />
+            lizard > paper & spock<br />
+            spock > scissors & rock
+          </p>
+        </button>
+        <section id="classicFightersOption" class="classicFighters hidden">
+          <img
+            src="./assets/happy-rocks.png"
+            alt="smiling cartoon rocks"
+            id="classicRockImage"
+            class="hidden"
+            data-icon="rock"
+          />
+          <img
+            src="./assets/happy-paper.png"
+            alt="smiling cartoon paper"
+            id="classicPaperImage"
+            class="hidden"
+            data-icon="paper"
+          />
+          <img
+            src="./assets/happy-scissors.png"
+            alt="smiling cartoon scissors"
+            id="classicScissorsImage"
+            class="hidden"
+            data-icon="scissors"
+          />
+        </section>
+        <section id="difficultFightersOption" class="difficultFighters hidden">
+          <img
+            src="./assets/happy-rocks.png"
+            alt="smiling cartoon rocks"
+            id="difficultRockImage"
+            class="hidden"
+            data-icon="rock"
+          />
+          <img
+            src="./assets/happy-paper.png"
+            alt="smiling cartoon paper"
+            id="difficultPaperImage"
+            class="hidden"
+            data-icon="paper"
+          />
+          <img
+            src="./assets/happy-scissors.png"
+            alt="smiling cartoon scissors"
+            id="difficultScissorsImage"
+            class="hidden"
+            data-icon="scissors"
+          />
+          <img
+            src="./assets/flat-lizard.png"
+            alt="image of lizard"
+            id="difficultLizardImage"
+            class="hidden"
+            data-icon="lizard"
+          />
+          <img
+            src="./assets/spock.png"
+            alt="image of spock"
+            id="difficultSpockImage"
+            class="hidden"
+            data-icon="spock"
+          />
+        </section>
+        <section class="hidden" id="chosenPlayers">
+          <img class="human-player image" id="humanPlayerImg" />
+          <img class="computer-player image" id="computerPlayerImg" />
+        </section>
+      </section>
+      <sidebar class="right-sidebar">
+        <section class="right-sidebar-label">
+          <span class="computer-emoji"> 💻 </span>
+          <section class="computer-title">Computer</section>
+          <h4 class="computer-win">
+            Wins: <span id="winCountComputer">0</span>
+          </h4>
+        </section>
+      </sidebar>
+    </div>
+    <script src="game.js"></script>
+    <script src="player.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>
