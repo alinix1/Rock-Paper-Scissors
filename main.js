@@ -29,7 +29,6 @@ var fighterOptions = [classicRockImage, classicPaperImage, classicScissorsImage,
 
 // EVENT LISTENERS
 
-
 classicGameButton.addEventListener('click', switchToClassicView);
 difficultGameButton.addEventListener('click', switchToDifficultView);
 changeGameButton.addEventListener('click', changeGameOption);
@@ -83,6 +82,8 @@ function startGameView() {
   toggleViews(classicGameButton);
   subHeaderText.innerText = 'Choose your fighter!';
 };
+
+// TODO: turn for loop into forEach() maybe?
 
 function showChosenFighters() {
   var humanPlayer = game.human.token;
@@ -142,13 +143,20 @@ function updateWins(whoWonElement, whoWonPlayer) {
 
 function startClassicGame(choice) {
   game.computer.token = randomClassicChoice();
-  if (event.target.id === 'classicRockImage') {
-    game.human.token = 'rock';
-  } else if (event.target.id === 'classicPaperImage') {
-    game.human.token = 'paper';
-  } else if (event.target.id === 'classicScissorsImage') {
-    game.human.token = 'scissors';
+  switch(event.target.id) {
+    case 'classicRockImage':
+      game.human.token = 'rock';
+      break;
+    case 'classicPaperImage':
+      game.human.token = 'paper';
+      break; 
+    case 'classicScissorsImage':
+      game.human.token = 'scissors';
+      break;
+    default:
+      game.human.token = 'scissors';
   }
+
   hideGameOptions();
   showChosenFighters();
   var didHumanWinClassic = game.checkIfPlayerWinsClassic();
@@ -172,16 +180,24 @@ function startClassicGame(choice) {
 
 function startDifficultGame(choice) {
   game.computer.token = randomDifficultChoice();
-  if (event.target.id === 'difficultRockImage') {
-    game.human.token = 'rock';
-  } else if (event.target.id === 'difficultPaperImage') {
-    game.human.token = 'paper';
-  } else if (event.target.id === 'difficultScissorsImage') {
-    game.human.token = 'scissors';
-  } else if (event.target.id === 'difficultLizardImage') {
-    game.human.token = 'lizard';
-  } else if (event.target.id === 'difficultSpockImage') {
-    game.human.token = 'spock';
+  switch(event.target.id) {
+    case 'difficultRockImage':
+      game.human.token = 'rock';
+      break;
+    case 'difficultPaperImage':
+      game.human.token = 'paper';
+      break; 
+    case 'difficultScissorsImage':
+      game.human.token = 'scissors';
+      break;
+    case 'difficultLizardImage':
+      game.human.token = 'lizard';
+      break;
+    case  'difficultSpockImage':
+      game.human.token = 'spock';
+      break;
+    default:
+      game.human.token = 'scissors';
   }
   hideGameOptions();
   showChosenFighters();
