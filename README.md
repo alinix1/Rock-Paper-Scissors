@@ -29,7 +29,7 @@ https://user-images.githubusercontent.com/28677929/173677161-54df13b6-9e24-437a-
 Built by [Ali Nix](https://github.com/alinix1), a Front End Engineering student in Mod 1 at the [Turing School of Software and Design](https://turing.edu/)
 
 * https://github.com/alinix1
-* https://www.linkedin.com/in/ali-nix-38b9b9126/
+* https://www.linkedin.com/in/ali-nix/
 
 ## Reflection
 In the beginning I made an outline or architecture for the data model (classes) that helped guide me in building the Player class and the Game class.  I struggled with the CSS the most on this project.  I most likely will not add additional features/functionality.  If I do decide to add a feature I would like to add a reset button. 
